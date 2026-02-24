@@ -28,6 +28,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
                 item.transform.SetParent(transform);
                 item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 
+                AudioManager.instance.PlayEquip();
                 ArmorSlot armorSlot = GetComponent<ArmorSlot>();
                 if (armorSlot != null)
                 {

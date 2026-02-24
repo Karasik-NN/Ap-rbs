@@ -29,7 +29,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
         ArmorSlot oldSlot = startParent.GetComponent<ArmorSlot>();
         if (oldSlot != null) oldSlot.ToggleVisual(false, 0);
-
+        AudioManager.instance.PlayUnequip();
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
         transform.SetParent(transform.root);
