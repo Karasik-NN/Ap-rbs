@@ -905,81 +905,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredType: 
---- !u!1 &87520026
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 87520027}
-  - component: {fileID: 87520029}
-  - component: {fileID: 87520028}
-  m_Layer: 5
-  m_Name: Armor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &87520027
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87520026}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2146797180}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1509, y: -343}
-  m_SizeDelta: {x: -1259.6022, y: -724.0022}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &87520028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87520026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &87520029
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87520026}
-  m_CullTransparentMesh: 1
 --- !u!1 &109005640
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,10 +1299,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
+    m_SelectedColor: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1678,7 +1603,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400.2183, y: 469.3251}
+  m_SizeDelta: {x: 603.51, y: 683.4249}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &187998588
 MonoBehaviour:
@@ -1700,7 +1625,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: "Stivs ir le\u0123end\u0101rs piedz\u012Bvojumu mekl\u0113t\u0101js un
+    vispus\u012Bgs meistars. Vi\u0146am piem\u012Bt neticams sp\u0113ks un iztur\u012Bba,
+    kas \u013Cauj celt varenas pils\u0113tas un pieveikt pat Enderas p\u016B\u0137i."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -1709,7 +1636,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1727,7 +1654,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 59.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5684,7 +5611,7 @@ MonoBehaviour:
   - {fileID: 1649126531}
   - {fileID: 775863350}
   - {fileID: 2015492800}
-  steveObject: {fileID: 0}
+  steveObject: {fileID: 109005640}
 --- !u!114 &750828735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6175,7 +6102,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 844835010}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9999969
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7321,7 +7248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00006866455, y: 0.00067676115}
+  m_AnchoredPosition: {x: -0.00006866455, y: 0.00007320556}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1000913265
@@ -7539,7 +7466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7727,7 +7654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4039216, g: 0.4039216, b: 0.4039216, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8167,7 +8094,9 @@ MonoBehaviour:
   - {fileID: 2019751658}
   descriptionText: {fileID: 187998588}
   descriptions:
-  - "Steve - drosm\u012Bgs varonis no Minecraft pasaules"
+  - "Stivs ir le\u0123end\u0101rs piedz\u012Bvojumu mekl\u0113t\u0101js un vispus\u012Bgs
+    meistars. Vi\u0146am piem\u012Bt neticams sp\u0113ks un iztur\u012Bba, kas \u013Cauj
+    celt varenas pils\u0113tas un pieveikt pat Enderas p\u016B\u0137i."
   - "Aleksa ir drosm\u012Bga un izdomas bag\u0101ta p\u0113tniece no Minecraft pasaules.
     Vi\u0146a ir paz\u012Bstama ar savu veikl\u012Bbu un prasmi izdz\u012Bvot pat
     visb\u012Bstam\u0101kaj\u0101s vid\u0113s. Kop\u0101 ar St\u012Bvu vi\u0146a
@@ -8705,7 +8634,7 @@ MonoBehaviour:
   - {fileID: 128866770}
   - {fileID: 2115410852}
   - {fileID: 1681906158}
-  steveObject: {fileID: 0}
+  steveObject: {fileID: 109005640}
 --- !u!114 &1328391798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9396,8 +9325,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 668.62, y: 280.8658}
-  m_SizeDelta: {x: 582.76, y: 518.2684}
+  m_AnchoredPosition: {x: 658.9242, y: 195.33017}
+  m_SizeDelta: {x: 620.5143, y: 689.3395}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1458811457
 MonoBehaviour:
@@ -9748,7 +9677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10153,7 +10082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12789,7 +12718,7 @@ MonoBehaviour:
   - {fileID: 225303724}
   - {fileID: 440003924}
   - {fileID: 598027662}
-  steveObject: {fileID: 0}
+  steveObject: {fileID: 109005640}
 --- !u!114 &1983127639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13827,7 +13756,6 @@ RectTransform:
   - {fileID: 1727941508}
   - {fileID: 1539694073}
   - {fileID: 1890636500}
-  - {fileID: 87520027}
   - {fileID: 716156425}
   - {fileID: 896521108}
   - {fileID: 800311890}

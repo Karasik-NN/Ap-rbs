@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0fba6f8f9e3ad3241ad661c46c0b74f3
+guid: 1a8e09b6a2963a9449e2ec2b64999258
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2875091553015639010
-    second: IB_0
+      213: -6640348593280842969
+    second: diamondSword_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IB_0
+      name: diamondSword_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 15
-        width: 161
-        height: 76
+        x: 0
+        y: 1
+        width: 447
+        height: 436
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e14d6c5277f9918d0800000000000000
-      internalID: -2875091553015639010
+      spriteID: 7230bb0f22eb8d3a0800000000000000
+      internalID: -6640348593280842969
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IB_0: -2875091553015639010
+      diamondSword_0: -6640348593280842969
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
