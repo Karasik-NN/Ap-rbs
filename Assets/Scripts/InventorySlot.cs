@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour, IDropHandler
 {
-    public string requiredType = ""; 
-
+    public string requiredType;
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null)
@@ -13,20 +13,26 @@ public class InventorySlot : MonoBehaviour, IDropHandler
 
             if (item != null)
             {
-                bool typeMatches = string.IsNullOrEmpty(requiredType) || item.itemType == requiredType;
-                
-                bool isEmpty = transform.childCount == 0;
+                DragItem alreadyPlacedItem = GetComponentInChildren<DragItem>();
 
-                if (typeMatches && isEmpty)
+                if (alreadyPlacedItem != null)
                 {
-                    item.isSnapped = true;
-                    item.transform.SetParent(transform);
-                    item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-                    Debug.Log("Предмет успешно положен");
+                    return;
                 }
-                else
+                if (!string.IsNullOrEmpty(requiredType) && item.itemType != requiredType)
                 {
-                    Debug.Log("Нельзя положить: либо тип не тот, либо слот занят");
+                    return;
+                }
+
+                item.isSnapped = true;
+                item.transform.SetParent(transform);
+                item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+
+                ArmorSlot armorSlot = GetComponent<ArmorSlot>();
+                if (armorSlot != null)
+                {
+                    armorSlot.ToggleVisual(true, item.armorID);
+                    item.GetComponent<Image>().enabled = false;
                 }
             }
         }
