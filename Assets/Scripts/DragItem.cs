@@ -8,13 +8,16 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
+    
     private Vector2 startPosition;
     private Transform startParent;
+    private Canvas mainCanvas;
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>() ?? gameObject.AddComponent<CanvasGroup>();
+        mainCanvas = GetComponentInParent<Canvas>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -25,12 +28,13 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
-        transform.SetAsLastSibling();
+
+        transform.SetParent(mainCanvas.transform);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.anchoredPosition += eventData.delta / GetComponentInParent<Canvas>().scaleFactor;
+        rectTransform.anchoredPosition += eventData.delta / mainCanvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -40,12 +44,9 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
         if (!isSnapped)
         {
+            transform.SetParent(startParent);
             rectTransform.anchoredPosition = startPosition;
-            Debug.Log("Возврат в инвентарь");
+            Debug.Log("Вернулся в старый слот");
         }
     }
-    public void UpdatePosition(Vector2 newPos, Transform newParent)
-{
-    
-}
 }
