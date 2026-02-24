@@ -1,40 +1,43 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public string itemType; 
-    public bool isSnapped = false;
-
-    private RectTransform rectTransform;
-    private CanvasGroup canvasGroup;
+    [Header("Item Settings")]
+    public string itemType;
+    public int armorID;
     
-    private Vector2 startPosition;
-    private Transform startParent;
-    private Canvas mainCanvas;
+    [HideInInspector] public Transform startParent;
+    [HideInInspector] public Vector3 startPosition;
+    [HideInInspector] public bool isSnapped = false;
+    
+    private CanvasGroup canvasGroup;
+    private RectTransform rectTransform;
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
-        canvasGroup = GetComponent<CanvasGroup>() ?? gameObject.AddComponent<CanvasGroup>();
-        mainCanvas = GetComponentInParent<Canvas>();
+        canvasGroup = GetComponent<CanvasGroup>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        isSnapped = false;
-        startPosition = rectTransform.anchoredPosition;
         startParent = transform.parent;
+        startPosition = transform.position;
+        isSnapped = false;
+
+        ArmorSlot oldSlot = startParent.GetComponent<ArmorSlot>();
+        if (oldSlot != null) oldSlot.ToggleVisual(false, 0);
 
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
-
-        transform.SetParent(mainCanvas.transform);
+        transform.SetParent(transform.root);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        rectTransform.anchoredPosition += eventData.delta / mainCanvas.scaleFactor;
+        rectTransform.anchoredPosition += eventData.delta / transform.root.localScale.x;
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -45,8 +48,9 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         if (!isSnapped)
         {
             transform.SetParent(startParent);
-            rectTransform.anchoredPosition = startPosition;
-            Debug.Log("Вернулся в старый слот");
+            transform.position = startPosition;
         }
+        
+        GetComponent<Image>().enabled = true;
     }
 }

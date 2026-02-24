@@ -247,12 +247,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24842733}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 109005641}
+  m_Father: {fileID: 580365515}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -760,6 +760,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: chest
+  armorID: 2
+  startParent: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
   isSnapped: 1
 --- !u!114 &83279890
 MonoBehaviour:
@@ -994,7 +997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &109005641
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1007,18 +1010,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 549002386}
-  - {fileID: 1647864056}
-  - {fileID: 24842734}
-  - {fileID: 1938023018}
-  - {fileID: 114677129}
-  - {fileID: 988494189}
-  - {fileID: 1643282196}
-  - {fileID: 1656945728}
-  - {fileID: 1540155857}
-  - {fileID: 1497382986}
-  - {fileID: 752221385}
-  - {fileID: 1337901360}
+  - {fileID: 1917461090}
+  - {fileID: 580365515}
+  - {fileID: 301290441}
+  - {fileID: 1159989787}
   m_Father: {fileID: 1245558478}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1089,12 +1084,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114677128}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 109005641}
+  m_Father: {fileID: 301290441}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1862,6 +1857,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: chest
+  armorID: 0
+  startParent: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
   isSnapped: 1
 --- !u!114 &194360267
 MonoBehaviour:
@@ -2507,6 +2505,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: boots
+  armorID: 0
+  startParent: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
   isSnapped: 1
 --- !u!114 &247590099
 MonoBehaviour:
@@ -2546,6 +2547,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247590094}
   m_CullTransparentMesh: 1
+--- !u!1 &301290440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 301290441}
+  m_Layer: 0
+  m_Name: Armor_Visuals_Boots
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &301290441
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301290440}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1938023018}
+  - {fileID: 114677129}
+  - {fileID: 1497382986}
+  m_Father: {fileID: 109005641}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &312899778
 GameObject:
   m_ObjectHideFlags: 0
@@ -2624,6 +2663,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: head
+  armorID: 1
+  startParent: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
   isSnapped: 1
 --- !u!114 &312899783
 MonoBehaviour:
@@ -3830,6 +3872,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: chest
+  armorID: 1
+  startParent: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
   isSnapped: 1
 --- !u!114 &543306808
 MonoBehaviour:
@@ -3894,12 +3939,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549002385}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 109005641}
+  m_Father: {fileID: 1917461090}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4094,6 +4139,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredType: 
+--- !u!1 &580365514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 580365515}
+  m_Layer: 0
+  m_Name: Armor_Visuals_Legs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &580365515
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580365514}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 24842734}
+  - {fileID: 988494189}
+  - {fileID: 752221385}
+  m_Father: {fileID: 109005641}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &582671512
 GameObject:
   m_ObjectHideFlags: 0
@@ -4275,6 +4358,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: legs
+  armorID: 2
+  startParent: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
   isSnapped: 1
 --- !u!114 &584800475
 MonoBehaviour:
@@ -4670,6 +4756,7 @@ GameObject:
   - component: {fileID: 632478488}
   - component: {fileID: 632478491}
   - component: {fileID: 632478492}
+  - component: {fileID: 632478493}
   m_Layer: 5
   m_Name: shlem
   m_TagString: head
@@ -4746,7 +4833,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ff0847d8a9c1a4f9ad4ee1c9975f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: head
+  requiredType: head
+  armorVisuals:
+  - {fileID: 549002385}
+  - {fileID: 1540155856}
+  - {fileID: 1656945727}
 --- !u!114 &632478492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4760,6 +4851,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredType: head
+--- !u!225 &632478493
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632478485}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &649697681
 GameObject:
   m_ObjectHideFlags: 0
@@ -5412,6 +5515,7 @@ GameObject:
   - component: {fileID: 750828732}
   - component: {fileID: 750828734}
   - component: {fileID: 750828735}
+  - component: {fileID: 750828736}
   m_Layer: 5
   m_Name: boots
   m_TagString: boots
@@ -5488,7 +5592,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ff0847d8a9c1a4f9ad4ee1c9975f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: boots
+  requiredType: boots
+  armorVisuals:
+  - {fileID: 1938023017}
+  - {fileID: 1497382985}
+  - {fileID: 114677128}
 --- !u!114 &750828735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5502,6 +5610,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredType: boots
+--- !u!225 &750828736
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750828729}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &752221384
 GameObject:
   m_ObjectHideFlags: 0
@@ -5527,12 +5647,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752221384}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 109005641}
+  m_Father: {fileID: 580365515}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5861,6 +5981,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 
+  armorID: 0
+  startParent: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
   isSnapped: 0
 --- !u!224 &800311890
 RectTransform:
@@ -5964,7 +6087,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 844835010}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9999469
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6085,6 +6208,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: head
+  armorID: 2
+  startParent: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
   isSnapped: 1
 --- !u!114 &812127842
 MonoBehaviour:
@@ -6202,6 +6328,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: head
+  armorID: 0
+  startParent: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
   isSnapped: 1
 --- !u!114 &835595067
 MonoBehaviour:
@@ -6813,12 +6942,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 988494188}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 109005641}
+  m_Father: {fileID: 580365515}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7069,7 +7198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340cfa29c311c1b44bb900a5f4794fd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredType: 
+  requiredType: head
 --- !u!1 &1000913263
 GameObject:
   m_ObjectHideFlags: 0
@@ -7104,7 +7233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000022888184, y: -0.000069169706}
+  m_AnchoredPosition: {x: -0.00006866455, y: -0.000010762873}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1000913265
@@ -7651,6 +7780,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredType: 
+--- !u!1 &1159989786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1159989787}
+  m_Layer: 0
+  m_Name: Armor_Visuals_Chest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1159989787
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159989786}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1647864056}
+  - {fileID: 1643282196}
+  - {fileID: 1337901360}
+  m_Father: {fileID: 109005641}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1194182089
 GameObject:
   m_ObjectHideFlags: 0
@@ -7992,6 +8159,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: legs
+  armorID: 0
+  startParent: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
   isSnapped: 1
 --- !u!114 &1245692588
 MonoBehaviour:
@@ -8356,6 +8526,7 @@ GameObject:
   - component: {fileID: 1328391794}
   - component: {fileID: 1328391797}
   - component: {fileID: 1328391798}
+  - component: {fileID: 1328391799}
   m_Layer: 5
   m_Name: chestplate
   m_TagString: chest
@@ -8432,7 +8603,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ff0847d8a9c1a4f9ad4ee1c9975f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: chest
+  requiredType: chest
+  armorVisuals:
+  - {fileID: 1647864055}
+  - {fileID: 1337901359}
+  - {fileID: 1643282195}
 --- !u!114 &1328391798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8446,6 +8621,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredType: chest
+--- !u!225 &1328391799
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328391792}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1334566426
 GameObject:
   m_ObjectHideFlags: 0
@@ -8574,12 +8761,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337901359}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 109005641}
+  m_Father: {fileID: 1159989787}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9260,6 +9447,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: legs
+  armorID: 1
+  startParent: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
   isSnapped: 1
 --- !u!114 &1476908294
 MonoBehaviour:
@@ -9360,12 +9550,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497382985}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 109005641}
+  m_Father: {fileID: 301290441}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9563,6 +9753,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: boots
+  armorID: 1
+  startParent: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
   isSnapped: 1
 --- !u!114 &1536811186
 MonoBehaviour:
@@ -9729,12 +9922,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540155856}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 109005641}
+  m_Father: {fileID: 1917461090}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10297,12 +10490,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643282195}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 109005641}
+  m_Father: {fileID: 1159989787}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10425,6 +10618,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: boots
+  armorID: 2
+  startParent: {fileID: 0}
+  startPosition: {x: 0, y: 0, z: 0}
   isSnapped: 1
 --- !u!114 &1644970021
 MonoBehaviour:
@@ -10489,16 +10685,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647864055}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 109005641}
+  m_Father: {fileID: 1159989787}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000008106232, y: 12.3}
+  m_AnchoredPosition: {x: 0, y: 12.3}
   m_SizeDelta: {x: 313.1798, y: 211.7946}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1647864057
@@ -10639,12 +10835,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656945727}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 109005641}
+  m_Father: {fileID: 1917461090}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11816,6 +12012,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredType: 
+--- !u!1 &1917461089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1917461090}
+  m_Layer: 0
+  m_Name: Armor_Visuals_Head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1917461090
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917461089}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 549002386}
+  - {fileID: 1540155857}
+  - {fileID: 1656945728}
+  m_Father: {fileID: 109005641}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1924925004
 GameObject:
   m_ObjectHideFlags: 0
@@ -11916,12 +12150,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1938023017}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 109005641}
+  m_Father: {fileID: 301290441}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12294,6 +12528,7 @@ GameObject:
   - component: {fileID: 1983127635}
   - component: {fileID: 1983127638}
   - component: {fileID: 1983127639}
+  - component: {fileID: 1983127640}
   m_Layer: 5
   m_Name: leggins
   m_TagString: legs
@@ -12370,7 +12605,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ff0847d8a9c1a4f9ad4ee1c9975f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotType: legs
+  requiredType: legs
+  armorVisuals:
+  - {fileID: 24842733}
+  - {fileID: 752221384}
+  - {fileID: 988494188}
 --- !u!114 &1983127639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12384,6 +12623,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredType: legs
+--- !u!225 &1983127640
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983127633}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1990409539
 GameObject:
   m_ObjectHideFlags: 0
@@ -12626,7 +12877,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2019751659
 RectTransform:
   m_ObjectHideFlags: 0
