@@ -17,7 +17,7 @@ public class AgeCalculator : MonoBehaviour
             int currentYear = DateTime.Now.Year;
             int age = currentYear - birthYear;
 
-            resultText.text = "Supervaronis " + charName + " ir " + age + " gada";
+            resultText.text = "Supervaroņam " + charName + " ir " + age + " gadi";
         }
         else
         {
