@@ -3,15 +3,15 @@ using UnityEngine.EventSystems;
 
 public class ArmorSlot : MonoBehaviour, IDropHandler
 {
-    public string slotType;
+    public string slotType; 
 
     public void OnDrop(PointerEventData eventData)
     {
-        DragItem item = eventData.pointerDrag.GetComponent<DragItem>();
-
-        if (item != null)
+        if (eventData.pointerDrag != null)
         {
-            if (item.itemType == slotType)
+            DragItem item = eventData.pointerDrag.GetComponent<DragItem>();
+
+            if (item != null && item.itemType == slotType)
             {
                 item.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
             }
