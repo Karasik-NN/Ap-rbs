@@ -10,12 +10,19 @@ public class characterSelector : MonoBehaviour
 
     public void ChangeCharacter(int index)
     {
+        ArmorSlot[] allArmorSlots = FindObjectsOfType<ArmorSlot>();
+        foreach (ArmorSlot slot in allArmorSlots)
+        {
+            slot.ResetSlot();
+        }
+
         for (int i = 0; i < characters.Length; i++)
         {
             characters[i].SetActive(i == index);
         }
         descriptionText.text = descriptions[index];
     }
+
     public void ChangeWidth(float value)
     {
         foreach (GameObject charObj in characters)

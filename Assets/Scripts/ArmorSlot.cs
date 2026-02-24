@@ -53,4 +53,21 @@ public void ToggleVisual(bool show, int id)
         }
     }
 }
+public void ResetSlot()
+{
+    
+    DragItem item = GetComponentInChildren<DragItem>();
+
+    if (item != null)
+    {
+        item.transform.SetParent(item.startParent);
+        item.transform.position = item.startPosition;
+        
+        item.isSnapped = false;
+
+        item.GetComponent<UnityEngine.UI.Image>().enabled = true;
+
+        ToggleVisual(false, 0);
+    }
+}
 }
