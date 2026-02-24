@@ -13,7 +13,11 @@ public class ArmorSlot : MonoBehaviour, IDropHandler
 
             if (item != null && item.itemType == slotType)
             {
-                item.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
+                item.isSnapped = true; 
+                
+                item.GetComponent<RectTransform>().position = GetComponent<RectTransform>().position;
+                
+                Debug.Log("Предмет зафиксирован в слоте!");
             }
         }
     }
