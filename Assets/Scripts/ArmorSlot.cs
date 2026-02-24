@@ -28,16 +28,29 @@ public class ArmorSlot : MonoBehaviour, IDropHandler
         }
     }
 
-    public void ToggleVisual(bool show, int id)
-    {
-        foreach (GameObject visual in armorVisuals)
-        {
-            if (visual != null) visual.SetActive(false);
-        }
+    [Header("Steve Visuals")]
+public GameObject[] steveVisuals;
 
-        if (show && id < armorVisuals.Length && armorVisuals[id] != null)
+[Header("Alex Visuals")]
+public GameObject[] alexVisuals;
+
+public GameObject steveObject;
+
+public void ToggleVisual(bool show, int id)
+{
+    foreach (GameObject v in steveVisuals) if(v != null) v.SetActive(false);
+    foreach (GameObject v in alexVisuals) if(v != null) v.SetActive(false);
+
+    if (show)
+    {
+        if (steveObject.activeSelf) 
         {
-            armorVisuals[id].SetActive(true);
+            if (id < steveVisuals.Length) steveVisuals[id].SetActive(true);
+        }
+        else 
+        {
+            if (id < alexVisuals.Length) alexVisuals[id].SetActive(true);
         }
     }
+}
 }
