@@ -12,4 +12,5 @@ public class ToStart : MonoBehaviour
             Invoke("LoadMainMenu", 0.15f);
         SceneManager.LoadScene("Start Scene"); 
     }
+    
 }

@@ -4,34 +4,32 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
 
-    [Header("Background Music")]
+    [Header("Audio Sources")]
     public AudioSource musicSource;
-    public AudioClip backgroundMusic;
-
-    [Header("Armor Sounds")]
     public AudioSource sfxSource;
+
+    [Header("Audio Clips")]
+    public AudioClip backgroundMusic;
     public AudioClip equipSound;
     public AudioClip unequipSound;
-
-    [Header("UI Sounds")]
     public AudioClip clickSound;
 
     void Awake()
+{
+    if (instance == null)
     {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
     }
+    else
+    {
+        Destroy(gameObject);
+    }
+}
 
     void Start()
     {
-        if (backgroundMusic != null)
+        if (musicSource != null && backgroundMusic != null)
         {
             musicSource.clip = backgroundMusic;
             musicSource.loop = true;
@@ -41,20 +39,20 @@ public class AudioManager : MonoBehaviour
 
     public void PlayEquip()
     {
-        if (equipSound != null) sfxSource.PlayOneShot(equipSound);
-    }
-    public void PlayUnequip()
-    {
-        if (unequipSound != null) sfxSource.PlayOneShot(unequipSound);
+        if (sfxSource != null && equipSound != null) sfxSource.PlayOneShot(equipSound);
     }
 
-    public void PlaySFX(AudioClip clip)
+    public void PlayUnequip()
     {
-        if (clip != null) sfxSource.PlayOneShot(clip);
+        if (sfxSource != null && unequipSound != null) sfxSource.PlayOneShot(unequipSound);
     }
+
+
     public void PlayClick()
     {
-    if (clickSound != null) 
-        sfxSource.PlayOneShot(clickSound);
-}
+        if (sfxSource != null && clickSound != null)
+        {
+            sfxSource.PlayOneShot(clickSound);
+        }
+    }
 }
