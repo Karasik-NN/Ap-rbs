@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cd9e889d48f52dd42a5fe086e05f559f
+guid: 96a8976ff84c9be4d9249e22ddef9574
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8531624658729438941
-    second: steve-removebg-preview_0
+      213: 8353063635395446977
+    second: Ghelm_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: steve-removebg-preview_0
+      name: Ghelm_0
       rect:
         serializedVersion: 2
-        x: 35
-        y: 56
-        width: 290
-        height: 591
+        x: 21
+        y: 30
+        width: 103
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 321f77b4394999980800000000000000
-      internalID: -8531624658729438941
+      spriteID: 1c88af5be1b0ce370800000000000000
+      internalID: 8353063635395446977
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      steve-removebg-preview_0: -8531624658729438941
+      Ghelm_0: 8353063635395446977
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
