@@ -4,38 +4,48 @@ using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour, IDropHandler
 {
+    [Header("Slot Settings")]
     public string requiredType;
-    public void OnDrop(PointerEventData eventData)
+
+   public void OnDrop(PointerEventData eventData)
+{
+    if (eventData.pointerDrag == null) return;
+
+    DragItem item = eventData.pointerDrag.GetComponent<DragItem>();
+
+    if (item != null)
     {
-        if (eventData.pointerDrag != null)
+        if (transform.childCount > 0) return;
+
+        string trimRequired = requiredType.Trim();
+
+        if (!string.IsNullOrEmpty(trimRequired))
         {
-            DragItem item = eventData.pointerDrag.GetComponent<DragItem>();
-
-            if (item != null)
+            if (item.itemType != trimRequired)
             {
-                DragItem alreadyPlacedItem = GetComponentInChildren<DragItem>();
-
-                if (alreadyPlacedItem != null)
-                {
-                    return;
-                }
-                if (!string.IsNullOrEmpty(requiredType) && item.itemType != requiredType)
-                {
-                    return;
-                }
-
-                item.isSnapped = true;
-                item.transform.SetParent(transform);
-                item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-
-                AudioManager.instance.PlayEquip();
-                ArmorSlot armorSlot = GetComponent<ArmorSlot>();
-                if (armorSlot != null)
-                {
-                    armorSlot.ToggleVisual(true, item.armorID);
-                    item.GetComponent<Image>().enabled = false;
-                }
+                Debug.Log($"Нельзя! Слот хочет {trimRequired}, а у предмета {item.itemType}");
+                return; 
             }
         }
+       
+        item.isSnapped = true;
+        item.transform.SetParent(transform);
+        item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+
+        ArmorSlot armorSlot = GetComponent<ArmorSlot>();
+        Image itemImage = item.GetComponent<Image>();
+
+        if (armorSlot != null)
+        {
+            if (AudioManager.instance != null) AudioManager.instance.PlayEquip();
+            armorSlot.ToggleVisual(true, item.armorID);
+            if (itemImage != null) itemImage.enabled = false;
+        }
+        else
+        {
+            if (itemImage != null) itemImage.enabled = true;
+            if (AudioManager.instance != null) AudioManager.instance.PlayClick();
+        }
     }
+}
 }

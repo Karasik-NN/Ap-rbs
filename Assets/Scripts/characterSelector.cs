@@ -10,17 +10,32 @@ public class characterSelector : MonoBehaviour
 
     public void ChangeCharacter(int index)
     {
-        ArmorSlot[] allArmorSlots = FindObjectsOfType<ArmorSlot>();
-        foreach (ArmorSlot slot in allArmorSlots)
-        {
-            slot.ResetSlot();
-        }
-
         for (int i = 0; i < characters.Length; i++)
         {
             characters[i].SetActive(i == index);
         }
-        descriptionText.text = descriptions[index];
+
+        if (index < descriptions.Length)
+        {
+            descriptionText.text = descriptions[index];
+        }
+
+        ArmorSlot[] allArmorSlots = FindObjectsOfType<ArmorSlot>();
+        foreach (ArmorSlot slot in allArmorSlots)
+        {
+        
+            DragItem itemInSlot = slot.GetComponentInChildren<DragItem>();
+
+            if (itemInSlot != null)
+            {
+               
+                slot.ToggleVisual(true, itemInSlot.armorID);
+            }
+            else
+            {
+                slot.ToggleVisual(false, -1);
+            }
+        }
     }
 
     public void ChangeWidth(float value)

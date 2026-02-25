@@ -15,17 +15,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip clickSound;
 
     void Awake()
-{
-    if (instance == null)
     {
         instance = this;
-        DontDestroyOnLoad(gameObject);
     }
-    else
-    {
-        Destroy(gameObject);
-    }
-}
 
     void Start()
     {
@@ -47,12 +39,8 @@ public class AudioManager : MonoBehaviour
         if (sfxSource != null && unequipSound != null) sfxSource.PlayOneShot(unequipSound);
     }
 
-
     public void PlayClick()
     {
-        if (sfxSource != null && clickSound != null)
-        {
-            sfxSource.PlayOneShot(clickSound);
-        }
+        if (sfxSource != null && clickSound != null) sfxSource.PlayOneShot(clickSound);
     }
 }

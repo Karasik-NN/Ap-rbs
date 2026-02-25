@@ -27,6 +27,8 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         startPosition = transform.position;
         isSnapped = false;
 
+        GetComponent<Image>().enabled = true;
+
         ArmorSlot oldSlot = startParent.GetComponent<ArmorSlot>();
         if (oldSlot != null) oldSlot.ToggleVisual(false, 0);
         AudioManager.instance.PlayUnequip();
@@ -40,17 +42,43 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         rectTransform.anchoredPosition += eventData.delta / transform.root.localScale.x;
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+   public void OnEndDrag(PointerEventData eventData)
+{
+    canvasGroup.blocksRaycasts = true;
+    canvasGroup.alpha = 1f;
+    if (!isSnapped)
     {
-        canvasGroup.alpha = 1f;
-        canvasGroup.blocksRaycasts = true;
-
-        if (!isSnapped)
-        {
-            transform.SetParent(startParent);
-            transform.position = startPosition;
-        }
+        transform.SetParent(startParent);
+        transform.position = startPosition;
+        rectTransform.anchoredPosition = Vector2.zero;
         
-        GetComponent<Image>().enabled = true;
+        ArmorSlot oldArmor = startParent.GetComponent<ArmorSlot>();
+        if (oldArmor != null)
+        {
+            GetComponent<Image>().enabled = true;
+            canvasGroup.alpha = 1f;
+            oldArmor.ToggleVisual(true, armorID); 
+            return;
+        }
     }
+
+    InventorySlot currentSlot = transform.parent.GetComponent<InventorySlot>();
+    if (currentSlot != null)
+    {
+        rectTransform.anchoredPosition = Vector2.zero;
+        ArmorSlot armor = currentSlot.GetComponent<ArmorSlot>();
+        
+        if (armor != null)
+        {
+            GetComponent<Image>().enabled = true;
+            canvasGroup.alpha = 1f;
+            armor.ToggleVisual(true, armorID);
+        }
+        else
+        {
+            GetComponent<Image>().enabled = true;
+            canvasGroup.alpha = 1f;
+        }
+    }
+}
 }
