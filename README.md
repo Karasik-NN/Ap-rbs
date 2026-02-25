@@ -21,7 +21,7 @@ Jūs varat izmēģināt ekipējuma sistēmu tieši savā pārlūkprogrammā:
 - Mainīt tēla izmēru
 - Spēle sastāv no divām galvenajām ainām (Scenes).
 ## 🗂️ Ainu struktūra
-###🏠 1. aina — Galvenā izvēlne
+### 🏠 1. aina — Galvenā izvēlne
 - Poga, lai sāktu tēla veidošanu
 - Poga, lai aizvērtu projektu
  ### 🎒 2. aina — Inventāra un tēla izvēlne
