@@ -1,5 +1,9 @@
 # 🟩 BrunasCraft
 
+## 🕹️ Demonstrācija
+Jūs varat izmēģināt ekipējuma sistēmu tieši savā pārlūkprogrammā:
+👉 **[Spēlēt WebGL versiju](https://karasik-nn.github.io/Ap-rbs/)**
+
 ## 2D Unity projekts ar inventāra sistēmu un varoņa pielāgošanu 
 ### Iedvesmots no spēles Minecraft
 
